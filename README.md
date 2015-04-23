@@ -1,6 +1,6 @@
 # cdplayer-copycat-of-jing.fm-
 
-A funyy thing that I noticed is,
+A funny thing that I noticed is,
 if you put 
 
 .rt{
