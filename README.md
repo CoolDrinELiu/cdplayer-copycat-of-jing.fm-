@@ -2,7 +2,7 @@
 
 A funyy thing that I noticed is,
 if you put 
-"
+
 .rt{
             -webkit-animation-play-state: running;
         }
@@ -10,14 +10,14 @@ if you put
         .stRt{
             -webkit-animation-play-state: paused;
         }
-"
+
 
 ahead of
-"
- .rotateCD{
+
+        .rotateCD{
             -webkit-animation:5s linear 0s normal none infinite spin;
         }
-        "
+        
 
 The animation won't stop after clicking.
 I've checked lots of information and dig up nothing helpful.
