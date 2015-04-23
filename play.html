@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title></title>
     <style>
-        @import url('http://cdn.gbtags.com/twitter-bootstrap/3.2.0/css/bootstrap.css');
         .bkg{
 
             background: url("MichaelBolton.jpg")no-repeat;
@@ -14,8 +13,23 @@
             left: 70px;
             top: 70px;
             z-index: 0;
+        }
+
+
+
+        .rotateCD{
             -webkit-animation:5s linear 0s normal none infinite spin;
         }
+
+
+        .rt{
+            -webkit-animation-play-state: running;
+        }
+
+        .stRt{
+            -webkit-animation-play-state: paused;
+        }
+
         @-webkit-keyframes spin {
             from{
                 transform: rotate(0deg);
@@ -24,6 +38,7 @@
                 transform: rotate(360deg);
             }
         }
+
 
         .mask{
             background: url("playerMask.png")no-repeat;
@@ -96,7 +111,7 @@
         <source src="../medias/Kill You.mp3">
     </audio>
 
-    <div class="bkg"></div>
+    <div class="bkg rotateCD"></div>
     <div class="mask"></div>
     <div class="playCtr" style="opacity:0">
 
@@ -109,6 +124,8 @@
 
 <script src="../scripts/jquery-2.1.3.min.js"></script>
 <script>
+
+
 var oAudio = document.getElementById("myaudio")
     $(".cover").hover(function(){
         $(".playCtr").css("opacity",1);
@@ -122,6 +139,9 @@ $(".playCtr").bind("click",myFun1 =function(){
     oAudio.pause();
     $(this).addClass("playCtrPause").removeClass("playCtr");
     $(this).bind("click", myFun2);
+    $(".bkg").addClass("stRt").removeClass("rt");
+
+
 
 })
 
@@ -129,6 +149,8 @@ $(".playCtrPause").bind("click", myFun2 =function(){
     oAudio.play();
     $(this).addClass("playCtr").removeClass("playCtrPause");
     $(this).bind("click", myFun1);
+    $(".bkg").addClass("rt").removeClass("stRt");
+
 })
 
 
